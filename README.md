@@ -10,7 +10,6 @@ A two-page fictional self-portrait: Erfan is a painter who can enter forgotten w
 - `classified.html`: three fun facts, an ordered survival guide, weaknesses, and future ambitions.
 - `style.css`: optional visual styling and responsive layouts.
 - `images/`: nine local JPG assets, converted from the supplied images for smaller downloads.
-- `START_HERE_FA.md`: Persian instructions for preview, publishing, and submission.
 
 ## Open locally
 
