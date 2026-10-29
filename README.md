@@ -78,11 +78,9 @@ I designed and painted the environmental illustrations and decorative artwork sp
 
 ## AI Clarification
 
-I referred to the course lectures and recordings as much as I could while working on this assignment. I developed the project's visual direction and supplied the illustrations described above.
+I used the course lectures and recordings while developing this assignment and contributed the visual direction and supplied illustrations. AI assisted with the website’s layout and logic and generated the fantasy portraits of me and Leo from real photographs.
 
-The fantasy portraits of me and Leo are AI-generated reinterpretations based on real photographs of us. AI assistance was also used to generate the website's HTML and CSS and to help with colours, spacing, image placement, and responsive layout. The final package therefore includes AI-assisted code alongside my artistic contribution. I include this clarification so that the use of AI in the project is transparent.
-
-The external links point to The Metropolitan Museum of Art's records for *The Lovers* and *Laila and Majnun*. Museum images are not embedded in this project.
+External links lead to The Metropolitan Museum of Art’s records for *The Lovers* and *Laila and Majnun*; no museum images are embedded.
 
 ## Verification performed
 
