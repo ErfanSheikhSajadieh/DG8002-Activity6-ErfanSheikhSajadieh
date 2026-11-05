@@ -4,6 +4,12 @@ Erfan Sheikh Sajadieh · DG8002 – Digital Media Environments · Activity 6
 
 A two-page fictional self-portrait: Erfan is a painter who can enter forgotten worlds through his canvases. The visual direction combines Persian architecture with a melancholic dark-fantasy atmosphere.
 
+## Activity 7 Update
+
+After going through the Week 7 lecture and slides, I used what I learned about CSS to guide the redesign of my Activity 6 website. This time, I chose the colour palette myself and made the design decisions for both pages. I wanted the cards to have rounded corners and subtle gold details, and I wanted the opening images to fade into the page background. I also asked for a gentle scroll effect so the sections would appear more naturally as you move down the page.
+
+The update uses a shared stylesheet, element, class, and ID selectors, Flexbox, and media queries. I directed the redesign and used AI assistance to implement the changes in the code.
+
 ## Files
 
 - `index.html`: introduction, origin story, three skills, and an illustrated section introducing Leo.
@@ -89,4 +95,4 @@ External links lead to The Metropolitan Museum of Art’s records for *The Lover
 - All local image, stylesheet, navigation, and section-anchor targets were checked against the files.
 - Required semantic elements and descriptive image alt attributes were checked.
 - Both external artwork pages were retrieved successfully during preparation.
-- Live GitHub Pages verification remains pending until publication.
+- Both published pages were checked for the updated shared stylesheet.
