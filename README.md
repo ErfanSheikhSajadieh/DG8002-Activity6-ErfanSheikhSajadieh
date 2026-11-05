@@ -1,6 +1,6 @@
 # The Painter of Forgotten Worlds
 
-Erfan Sheikh Sajadieh · DG8002 – Digital Media Environments · Activity 6
+Erfan Sheikh Sajadieh · DG8002 – Digital Media Environments · Activity 7 CSS redesign (built on Activity 6)
 
 A two-page fictional self-portrait: Erfan is a painter who can enter forgotten worlds through his canvases. The visual direction combines Persian architecture with a melancholic dark-fantasy atmosphere.
 
@@ -10,11 +10,24 @@ After going through the Week 7 lecture and slides, I used what I learned about C
 
 The update uses a shared stylesheet, element, class, and ID selectors, Flexbox, and media queries. I directed the redesign and used AI assistance to implement the changes in the code.
 
+### What changed for Activity 7
+
+| Area | Update |
+| --- | --- |
+| Shared CSS | Both HTML pages load the same external stylesheet. |
+| CSS selectors | Element selectors style headings and links, reusable classes such as `.section` and `.eyebrow` keep the pages consistent, and `#origin` adds space above the story when following its anchor link. |
+| Colour palette | I chose `#37848C`, `#D5C3A1`, `#23333A`, `#E9E4DD`, and `#AA8C64` for the backgrounds, text, buttons, and accents. |
+| Cards and image frames | Skills and archive facts have flat navy backgrounds, rounded corners, and gold details. The character panel has its own border and spacing, and the portrait has an arched frame. |
+| Opening sections | Both pages place the image beside the heading on desktop. The image fades into the page background, and the section can grow with its content so the button stays inside it. |
+| Flexbox and responsive layout | The navigation and skills cards use Flexbox. Media queries stack the cards on phones, scale headings, and adjust the opening layout for smaller screens. |
+| Scroll effect | Sections gently rise and become clearer as they enter the viewport in supported browsers. The effect respects reduced-motion preferences. |
+| Publication | Both pages were published from the existing repository and checked for the updated shared stylesheet. |
+
 ## Files
 
 - `index.html`: introduction, origin story, three skills, and an illustrated section introducing Leo.
 - `classified.html`: three fun facts, an ordered survival guide, weaknesses, and future ambitions.
-- `style.css`: optional visual styling and responsive layouts.
+- `style.css`: shared stylesheet for both pages, including responsive layouts.
 - `images/`: nine local JPG assets, converted from the supplied images for smaller downloads.
 
 ## Open locally
@@ -37,19 +50,11 @@ Both pages use `<!DOCTYPE html>`, `<html lang="en">`, `<head>`, character encodi
 
 The HTML contains all the content and navigation. Removing the stylesheet leaves both pages readable and navigable. CSS controls colour, type, spacing, image placement, and layouts at narrower widths. No JavaScript is used.
 
-## Publish on GitHub Pages
+## GitHub Pages and submission
 
-1. Create a **public** repository. Suggested name: `DG8002-Activity6-ErfanSheikhSajadieh`.
-2. Upload these extracted contents to the repository root: `index.html`, `classified.html`, `style.css`, `images/`, and the Markdown files. Upload the actual files, not the ZIP or a single extra enclosing folder.
-3. Commit the upload.
-4. Go to **Settings → Pages**. Choose **Deploy from a branch**, then the branch containing your files (normally `main`) and **/(root)**. Save.
-5. Wait for deployment. Use the published website link shown by GitHub Pages; do not submit a guessed URL.
-6. Visit both live pages. Check both navigation directions, every image, and the external museum links.
-7. Submit the public repository URL and the published website URL to D2L before the next class, as instructed by the assignment.
+Activity 7 builds on the existing Activity 6 repository, as requested in the assignment. For D2L, submit the [public GitHub repository](https://github.com/ErfanSheikhSajadieh/DG8002-Activity6-ErfanSheikhSajadieh) and the [published website](https://erfansheikhsajadieh.github.io/DG8002-Activity6-ErfanSheikhSajadieh/). The second page is available through [Classified Archive](https://erfansheikhsajadieh.github.io/DG8002-Activity6-ErfanSheikhSajadieh/classified.html).
 
-Publishing has not been completed as part of this package. A local preview is not a GitHub Pages deployment.
-
-## Assignment coverage
+## Activity 6 foundation
 
 | Requirement | Location |
 | --- | --- |
@@ -64,7 +69,7 @@ Publishing has not been completed as part of this package. A local preview is no
 | At least two images and alt attributes | Both pages |
 | Navigation between pages | Header, footer, and content links |
 | Relevant external hyperlink | Met artwork records on both pages |
-| Public repository and live website | Remaining publication step |
+| Public repository and live website | Published on GitHub Pages |
 
 ## Images and inspiration
 
