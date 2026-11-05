@@ -1,6 +1,5 @@
-/* DG8002 Activity 6 — Erfan Sheikh Sajadieh.
-   HTML provides all content and navigation. This optional stylesheet
-   adds the Persian dark-fantasy visual theme; no JavaScript is used. */
+/* DG8002 Activities 6 and 7 — Erfan Sheikh Sajadieh.
+   Shared styles for The Painter and Classified Archive. */
 :root {
     --ink: #0e161b;
     --paper: #e9e1d3;
@@ -48,10 +47,19 @@ nav a[aria-current] { color: var(--gold); border-bottom: 1px solid var(--gold); 
 .portrait-frame::before { content: ''; position: absolute; inset: -9px 9px; border: 1px solid var(--line); pointer-events: none; }
 .portrait-frame img { width: 100%; max-height: 640px; object-fit: cover; object-position: center 35%; }
 .intro-copy > p:not(.eyebrow), .origin p:not(.eyebrow), .survival p:not(.eyebrow), .weakness p:not(.eyebrow), .ambition > p:not(.eyebrow) { color: #d0cec6; font-size: 1.03rem; }
-.character-details { border-top: 1px solid var(--line); padding-top: 20px; margin-top: 30px; }
+.character-details {
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--gold);
+    background: #0b1218;
+}
+.character-details p:last-child { margin-bottom: 0; }
 .character-details p { display: flex; gap: 15px; font-size: .85rem; margin-bottom: 8px; }
 .character-details span { min-width: 96px; color: var(--gold); font-style: italic; }
 .ornament { width: min(700px, 76%); margin: 10px auto; opacity: .8; mix-blend-mode: screen; }
+/* Leave breathing room above the origin story when following its link. */
+#origin { scroll-margin-top: 1rem; }
 .origin { display: grid; grid-template-columns: 1fr .85fr; gap: 100px; align-items: center; }
 .origin figure img { width: 100%; max-height: 610px; object-fit: cover; border: 1px solid var(--line); }
 .text-link { display: inline-block; margin-top: 10px; font-size: .9rem; }
@@ -99,6 +107,7 @@ nav a[aria-current] { color: var(--gold); border-bottom: 1px solid var(--gold); 
     .site-footer { flex-wrap: wrap; }
 }
 @media (max-width: 620px) {
+    h1 { font-size: clamp(2rem, 8.5vw, 3.1rem); }
     .site-header { flex-direction: column; align-items: flex-start; padding: 22px 24px 16px; gap: 18px; }
     nav { width: 100%; justify-content: space-between; gap: 15px; font-size: .72rem; }
     .hero { min-height: 590px; height: auto; }
