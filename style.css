@@ -35,16 +35,20 @@ p { margin-bottom: 20px; }
 nav { display: flex; flex-wrap: wrap; gap: 30px; font-family: Arial, sans-serif; font-size: .78rem; letter-spacing: .05em; }
 nav a { color: var(--paper); text-decoration: none; padding-block: 7px; }
 nav a[aria-current] { color: var(--gold); border-bottom: 1px solid var(--gold); }
-.hero { --hero-accent: var(--gold); --hero-surface: color-mix(in srgb, var(--ink) 74%, var(--teal)); position: relative; min-height: 670px; height: min(780px, 83vh); display: flex; align-items: center; isolation: isolate; background: var(--ink); }
+.hero { --hero-accent: var(--gold); --hero-surface: color-mix(in srgb, var(--ink) 74%, var(--teal)); position: relative; min-height: clamp(670px, 83vh, 780px); display: flex; align-items: center; isolation: isolate; }
 .hero::before {
     content: '';
     position: absolute;
     inset: 18px;
     border: 1px solid #AA8C6499;
+    border-radius: 18px;
     pointer-events: none;
 }
 .hero-image { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -3; }
 .hero::after { content: ''; position: absolute; inset: 0; z-index: -2; background: linear-gradient(90deg, #23333AF5 0%, #23333AB8 38%, #23333A19 83%), linear-gradient(0deg, var(--ink) 0%, transparent 28%); }
+.hero-image, .hero::after, .hero::before {
+    mask-image: linear-gradient(to bottom, #000 78%, transparent 100%);
+}
 .hero-content { position: relative; width: 100%; max-width: 1440px; margin: auto; padding: 70px 6%; }
 .hero h1 { text-wrap: balance; }
 .hero h1 em { color: var(--hero-accent); }
@@ -134,22 +138,21 @@ nav a[aria-current] { color: var(--gold); border-bottom: 1px solid var(--gold); 
 .site-footer p { margin: 0; }
 .site-footer p span { display: block; color: var(--gold); font-family: Arial, sans-serif; font-size: .62rem; letter-spacing: .1em; margin-top: 5px; }
 .site-footer > a { white-space: nowrap; }
-.archive-hero { --hero-accent: var(--gold); --hero-surface: color-mix(in srgb, var(--ink) 86%, var(--bronze)); min-height: 580px; height: 69vh; }
+.archive-hero { --hero-accent: var(--gold); --hero-surface: color-mix(in srgb, var(--ink) 86%, var(--bronze)); min-height: max(580px, 69vh); }
 .archive-hero .hero-image { object-position: center; }
 .archive-hero::after {
     background: linear-gradient(90deg, #23333AF5, #23333A65 76%),
                 linear-gradient(0deg, var(--ink), transparent 35%);
 }
 @media (min-width: 901px) {
-    .hero {
-        background: radial-gradient(ellipse at 0% 90%, var(--hero-surface), var(--ink) 65%);
-    }
     .hero::before { inset: 22px 22px 22px 47%; z-index: 1; }
     .hero-image { inset: 0 0 0 auto; width: 56%; object-position: 60% center; }
-    .hero::after {
-        background: linear-gradient(90deg, transparent 43%, #23333A 44%, #23333A36 55%, transparent 72%),
-                    linear-gradient(0deg, #23333ABA, transparent 35%);
+    .hero-image {
+        mask-image: linear-gradient(to right, transparent, #000 30%),
+                    linear-gradient(to bottom, #000 78%, transparent 100%);
+        mask-composite: intersect;
     }
+    .hero::after { display: none; }
     .hero h1 { max-width: 9ch; font-size: clamp(3.75rem, 5.7vw, 6.8rem); }
     .archive-hero h1 { max-width: 10ch; }
     .hero-content > p:not(.eyebrow) { max-width: min(32ch, 43%); }
