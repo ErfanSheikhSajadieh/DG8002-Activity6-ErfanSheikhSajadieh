@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Meet Erfan, the Painter of Forgotten Worlds: an artist whose paintings open doors into lost Persian kingdoms.">
     <title>Erfan | The Painter of Forgotten Worlds</title>
-    <link rel="stylesheet" href="style.css?v=activity8">
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css?v=theme-icons">
+    <script src="script.js?v=theme-icons" defer></script>
 </head>
 <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -15,7 +15,10 @@
         <nav aria-label="Main navigation">
             <a href="index.html" aria-current="page">The Painter</a>
             <a href="classified.html">Classified Archive <span aria-hidden="true">↗</span></a>
-            <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false" hidden>Light mode</button>
+            <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to light mode" hidden>
+                <span class="theme-sun" aria-hidden="true">☀︎</span>
+                <span class="theme-moon" aria-hidden="true">☾</span>
+            </button>
         </nav>
     </header>
 
@@ -51,7 +54,9 @@
             </div>
         </section>
 
-        <img class="ornament" src="images/ornament.jpg" width="1920" height="274" alt="" loading="lazy">
+        <div class="ornament">
+            <img src="images/ornament.jpg" width="1920" height="274" alt="" loading="lazy">
+        </div>
 
         <section id="origin" class="section origin" aria-labelledby="origin-title">
             <div>

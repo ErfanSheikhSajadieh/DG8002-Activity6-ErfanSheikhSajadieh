@@ -6,7 +6,7 @@ A two-page fictional self-portrait: Erfan is a painter who can enter forgotten w
 
 ## Activity 8 Interactive Edition
 
-The homepage has a visitor's field desk with a guestbook greeting and five random facts about Erfan. The greeting rejects blank names and displays its result directly on the page. The fact button updates the text and avoids repeating the currently displayed fact. The Light mode button works on both pages and saves the preference when browser storage is available.
+The homepage has a visitor's field desk with a guestbook greeting and five random facts about Erfan. The greeting rejects blank names and displays its result directly on the page. The fact button updates the text and avoids repeating the currently displayed fact. The theme button shows a sun in dark mode and a moon in light mode. It works on both pages and saves the preference when browser storage is available.
 
 Both pages load the shared `script.js` with `defer`. The interactions use DOM selectors, `textContent`, `classList`, and click and submit event listeners. The greeting and fact generator update the page without reloading it.
 

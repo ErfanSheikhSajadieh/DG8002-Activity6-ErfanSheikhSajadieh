@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+    <filter id="remove-black" color-interpolation-filters="sRGB">
+        <!-- Convert near-black pixels to transparency and retain the original RGB colours. -->
+        <feColorMatrix in="SourceGraphic" type="matrix" values="
+            0 0 0 0 0
+            0 0 0 0 0
+            0 0 0 0 0
+            0.2126 0.7152 0.0722 0 0"/>
+        <feComponentTransfer result="ornament-mask">
+            <feFuncA type="linear" slope="10" intercept="-0.08"/>
+        </feComponentTransfer>
+        <feComposite in="SourceGraphic" in2="ornament-mask" operator="in"/>
+    </filter>
+</svg>

@@ -4,7 +4,7 @@ const themeKey = "tagme-light-theme";
 
 function setTheme(light) {
     document.body.classList.toggle("light-theme", light);
-    themeButton.setAttribute("aria-pressed", String(light));
+    themeButton.setAttribute("aria-label", light ? "Switch to dark mode" : "Switch to light mode");
 }
 
 let savedLightTheme = false;
