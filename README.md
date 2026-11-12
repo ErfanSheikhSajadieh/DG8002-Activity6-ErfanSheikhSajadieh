@@ -1,8 +1,14 @@
 # The Painter of Forgotten Worlds
 
-Erfan Sheikh Sajadieh · DG8002 – Digital Media Environments · Activity 7 CSS redesign (built on Activity 6)
+Erfan Sheikh Sajadieh · DG8002 – Digital Media Environments · Activity 8 Interactive Edition (built on Activities 6 and 7)
 
 A two-page fictional self-portrait: Erfan is a painter who can enter forgotten worlds through his canvases. The visual direction combines Persian architecture with a melancholic dark-fantasy atmosphere.
+
+## Activity 8 Interactive Edition
+
+The homepage has a visitor's field desk with a guestbook greeting and five random facts about Erfan. The greeting rejects blank names and displays its result directly on the page. The fact button updates the text and avoids repeating the currently displayed fact. The Light mode button works on both pages and saves the preference when browser storage is available.
+
+Both pages load the shared `script.js` with `defer`. The interactions use DOM selectors, `textContent`, `classList`, and click and submit event listeners. The greeting and fact generator update the page without reloading it.
 
 ## Activity 7 Update
 
@@ -28,11 +34,12 @@ The update uses a shared stylesheet, element, class, and ID selectors, Flexbox, 
 - `index.html`: introduction, origin story, three skills, and an illustrated section introducing Leo.
 - `classified.html`: three fun facts, an ordered survival guide, weaknesses, and future ambitions.
 - `style.css`: shared stylesheet for both pages, including responsive layouts.
+- `script.js`: shared theme toggle and homepage visitor interactions.
 - `images/`: nine local JPG assets, converted from the supplied images for smaller downloads.
 
 ## Open locally
 
-Extract the complete ZIP first. Open `index.html` in a browser. Keep `classified.html`, `style.css`, and `images/` beside it. No installation, JavaScript, framework, account, or build command is needed to view the local site.
+Extract the complete ZIP first. Open `index.html` in a browser. Keep `classified.html`, `style.css`, `script.js`, and `images/` beside it. No installation, framework, account, or build command is needed.
 
 ## HTML concepts used
 
@@ -48,11 +55,11 @@ Both pages use `<!DOCTYPE html>`, `<html lang="en">`, `<head>`, character encodi
 - `<a href="...">` connects the two pages, links to sections, and links to relevant museum artwork records.
 - `<footer>` contains project identification and another route to the other page.
 
-The HTML contains all the content and navigation. Removing the stylesheet leaves both pages readable and navigable. CSS controls colour, type, spacing, image placement, and layouts at narrower widths. No JavaScript is used.
+The HTML contains all the content and navigation. Removing the stylesheet leaves both pages readable and navigable. CSS controls colour, type, spacing, image placement, and layouts at narrower widths.
 
 ## GitHub Pages and submission
 
-Activity 7 builds on the existing Activity 6 repository, as requested in the assignment. For D2L, submit the [public GitHub repository](https://github.com/ErfanSheikhSajadieh/DG8002-Activity6-ErfanSheikhSajadieh) and the [published website](https://erfansheikhsajadieh.github.io/DG8002-Activity6-ErfanSheikhSajadieh/). The second page is available through [Classified Archive](https://erfansheikhsajadieh.github.io/DG8002-Activity6-ErfanSheikhSajadieh/classified.html).
+Activity 8 continues the same public repository used for Activities 6 and 7. For D2L, submit the [public GitHub repository](https://github.com/ErfanSheikhSajadieh/DG8002-Activity6-ErfanSheikhSajadieh) and the [published website](https://erfansheikhsajadieh.github.io/DG8002-Activity6-ErfanSheikhSajadieh/). The second page is available through [Classified Archive](https://erfansheikhsajadieh.github.io/DG8002-Activity6-ErfanSheikhSajadieh/classified.html).
 
 ## Activity 6 foundation
 
@@ -89,7 +96,7 @@ I designed and painted the environmental illustrations and decorative artwork sp
 
 ## AI Clarification
 
-I used the course lectures and recordings while developing this assignment and contributed the visual direction and supplied illustrations. AI assisted with the website’s layout and logic and generated the fantasy portraits of me and Leo from real photographs.
+I used the course lectures and recordings while developing this assignment and contributed the visual direction and supplied illustrations. AI assisted with the website’s layout and logic, including the Activity 8 JavaScript implementation, and generated the fantasy portraits of me and Leo from real photographs.
 
 External links lead to The Metropolitan Museum of Art’s records for *The Lovers* and *Laila and Majnun*; no museum images are embedded.
 

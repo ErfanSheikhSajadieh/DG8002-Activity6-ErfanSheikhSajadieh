@@ -1,4 +1,4 @@
-/* DG8002 Activities 6 and 7 — Erfan Sheikh Sajadieh.
+/* DG8002 Activities 6, 7, and 8 — Erfan Sheikh Sajadieh.
    Shared styles for The Painter and Classified Archive. */
 :root {
     --ink: #23333A;
@@ -232,3 +232,78 @@ nav a[aria-current] { color: var(--gold); border-bottom: 1px solid var(--gold); 
         }
     }
 }
+
+/* Activity 8 controls and visitor interactions */
+.theme-toggle, .visitor-button, .visitor-panel input {
+    border: 1px solid var(--bronze);
+    border-radius: 10px;
+    background: var(--ink);
+    color: var(--paper);
+    padding: 10px 14px;
+    font: 600 .85rem/1.35 Arial, sans-serif;
+}
+.theme-toggle, .visitor-button { cursor: pointer; }
+.theme-toggle[aria-pressed="true"], .visitor-button:hover {
+    background: var(--gold);
+    color: var(--ink);
+}
+.theme-toggle:focus-visible, .visitor-panel :focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 3px;
+}
+.visitor-panels { display: flex; flex-wrap: wrap; gap: 20px; }
+.visitor-panel {
+    flex: 1 1 240px;
+    min-width: 0;
+    padding: clamp(18px, 4vw, 34px);
+    border: 1px solid var(--bronze);
+    border-radius: 22px;
+    background: var(--panel);
+}
+.visitor-panel label { display: block; margin-bottom: 6px; }
+.visitor-panel input {
+    display: block;
+    width: 100%;
+    margin-bottom: 12px;
+    font-size: 1rem;
+}
+.visitor-panel input[aria-invalid="true"] { border: 2px solid currentColor; }
+.visitor-result { margin: 12px 0 0; overflow-wrap: anywhere; }
+.visitor-result:empty { margin: 0; }
+
+/* The light theme uses a parchment surface and dark teal accents. */
+body.light-theme {
+    --ink: #F6F1E7;
+    --paper: #23333A;
+    --gold: #225E63;
+    --bronze: #866746;
+    --line: #86674670;
+    --panel: #FFFBF3;
+    background: var(--ink);
+    color: var(--paper);
+    color-scheme: light;
+}
+.light-theme::before { background: none; }
+.light-theme .hero { --hero-surface: #FFFBF3; }
+.light-theme .hero::after {
+    background: linear-gradient(90deg, #F6F1E7, #F6F1E7D9 62%, #F6F1E782);
+}
+.light-theme .hero-caption {
+    border-radius: 8px;
+    padding: 2px 8px;
+    background: var(--panel);
+}
+.light-theme .button { background: var(--panel); }
+.light-theme .hero .button,
+.light-theme .button:hover {
+    background: var(--gold);
+    color: var(--ink);
+}
+.light-theme .hero .button:hover,
+.light-theme .hero:not(.archive-hero) .button:hover {
+    background: var(--panel);
+    color: var(--gold);
+}
+.light-theme .closing::after { background: #F6F1E7E6; }
+.light-theme .return-banner { background: var(--panel); }
+.light-theme .ornament { mix-blend-mode: normal; }

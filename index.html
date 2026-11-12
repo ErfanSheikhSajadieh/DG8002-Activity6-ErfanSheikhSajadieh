@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Meet Erfan, the Painter of Forgotten Worlds: an artist whose paintings open doors into lost Persian kingdoms.">
     <title>Erfan | The Painter of Forgotten Worlds</title>
-    <link rel="stylesheet" href="style.css?v=hero-blend">
+    <link rel="stylesheet" href="style.css?v=activity8">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -14,6 +15,7 @@
         <nav aria-label="Main navigation">
             <a href="index.html" aria-current="page">The Painter</a>
             <a href="classified.html">Classified Archive <span aria-hidden="true">↗</span></a>
+            <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false" hidden>Light mode</button>
         </nav>
     </header>
 
@@ -90,6 +92,27 @@
                 <img src="images/leo.jpg" width="1920" height="1600" alt="Leo, a gigantic copper-gold dog with long ears, ornate gold and turquoise armour, and a burgundy mantle, guards a glowing portal beside a tiny painter in a ruined Persian palace." loading="lazy">
                 <figcaption>Field note III — The smallest companion casts the greatest shadow.</figcaption>
             </figure>
+        </section>
+
+        <section class="section visitor-tools" id="visitor-tools" aria-labelledby="visitor-title" hidden>
+            <p class="eyebrow">Visitor's field desk</p>
+            <h2 id="visitor-title">Leave your name.<br><em>Find a story.</em></h2>
+            <div class="visitor-panels">
+                <article class="visitor-panel">
+                    <h3>Sign the guestbook</h3>
+                    <form id="greeting-form" novalidate>
+                        <label for="visitor-name">Your name</label>
+                        <input id="visitor-name" name="name" type="text" autocomplete="given-name" maxlength="60" required>
+                        <button class="visitor-button" type="submit">Greet me</button>
+                    </form>
+                    <p id="greeting-result" class="visitor-result" role="status"></p>
+                </article>
+                <article class="visitor-panel">
+                    <h3>A fact about the painter</h3>
+                    <button class="visitor-button" id="fact-button" type="button">Draw a fact</button>
+                    <p id="fact-result" class="visitor-result" role="status">Draw a fact to learn something about Erfan.</p>
+                </article>
+            </div>
         </section>
 
         <section class="closing" aria-labelledby="closing-title">
